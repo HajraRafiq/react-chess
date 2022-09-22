@@ -6,13 +6,16 @@ Programs must be written for people to read, and only incidentally for machines 
 
 ## Milestones
 
-https://github.com/jsveron23/react-chess/milestones
+https://github.com/HajraRafiq/react-chess
+
+#Dockerhub image
+https://hub.docker.com/r/hajrarafiq/chess
 
 ## Showcase
 
 https://react-chess.app
 
-## Installation & Start
+## Installation & Development Start
 
 ```bash
 npm install
@@ -24,3 +27,32 @@ open browser, http://localhost:3000
 ## License
 
 MIT
+## For making container
+```bash
+nerdctl build -t chess:v1 .
+```
+
+#For running the container in localhost
+
+```bash
+ nerdctl run -p 8000:80 chess:v1
+```
+
+#To pull my container image
+
+```bash 
+nerdctl pull hajrarafiq/chess:v1
+```
+#To run my chess image
+
+```bash
+nerdctl run hajrarafiq/chess:v1
+```
+
+# To check files inside the container
+
+```bash
+nerdctl run -it hajrarafiq/chess:v1
+```
+
+
