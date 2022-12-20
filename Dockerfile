@@ -12,3 +12,4 @@ RUN npm run build
 FROM nginx:latest AS Prod
 WORKDIR /usr/share/nginx/html/
 COPY --from=build /home/node/app/public/ .
+EXPOSE 8080
